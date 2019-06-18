@@ -36,7 +36,7 @@ class First():
         sleep(15)#等待战斗结束
         
         pyautogui.click(random_W(200), random_W(200) , 10 , 2)#点击界面跳过对话
-    doit(1)
+#     doit(1)
 
 
     

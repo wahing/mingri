@@ -8,13 +8,12 @@ class Third():
         print(3)
         
     def doIt(self):
-#         pyautogui.click(682, 1060, 1)#切换到模拟器
+        pyautogui.click(682, 1060, 1)#切换到模拟器
 
         sleep(4)
-        pyautogui.click( random_W(100) , random_W(100) , 25 , 1 )#点击屏幕
+        pyautogui.click( random_W(100) , random_W(100) , 1 , 1 )#点击屏幕
         
-        sleep(8)
-        
+        sleep(5)
         pyautogui.click( random_W(1300) , random_W(945) , 1 , 1 )#点击寻访一次
         
         sleep(4)
@@ -24,7 +23,7 @@ class Third():
         pyautogui.click( random_W(100) , random_W(100) , 1 , 1 )#点击屏幕
         
 
-    doIt(1)
+#     doIt(1)
         
         
         

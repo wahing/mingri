@@ -51,4 +51,4 @@ class Fifth():
         sleep(2)
     
         pyautogui.click( random_W(1298) , random_W(736) , 1 )#点击确定
-    doit(1)
+#     doit(1)

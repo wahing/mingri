@@ -43,4 +43,4 @@ class Sixth():
         sleep(35)
         
         pyautogui.click( random_W(450) , random_W(905) , 5 , 3 )#跳过对话
-    doit(1)   
+#     doit(1)   

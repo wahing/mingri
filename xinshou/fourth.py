@@ -21,4 +21,4 @@ class Fourth():
         sleep(1)
         pyautogui.click( random_W(200) , random_W(370) , 1 )#点击首页
     
-    formation(1)
+#     formation(1)

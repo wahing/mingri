@@ -61,5 +61,5 @@ class Seventh():
         
         pyautogui.click( random_W(250) , random_W(250) , 3 , 1 )#结束
         
-    doit(1)  
+#     doit(1)  
         
