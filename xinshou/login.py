@@ -10,11 +10,12 @@ from common.name import *
 class Login():
     def __init__(self):
         print('login')
-        pyautogui.click(640, 1060, 1)#切换到模拟器
+#         pyautogui.click(640, 1060, 1)#切换到模拟器
         sleep(2)
 
     def doGuest(self):
-        
+        sleep(10)
+        print('doGuest')
         pyautogui.click(1350, 980, 1)#点击账号管理
         
         sleep(2)
@@ -42,13 +43,18 @@ class Login():
         
 
     def login_exists(self):
+        print('login_exists')
         phoneNumber = '18866478814'
         psw = '12345678a'
         
+        pyautogui.click(1350, 980, 1)#点击账号管理
+        sleep(1)
         pyautogui.click(640, 740, 1)#账户登陆
         
         sleep(1)
         pyautogui.click(940, 640, 1)#点击账号
+        pyautogui.typewrite(['backspace'])
+        sleep(1)
         pyautogui.typewrite(['backspace'])
         pyautogui.typewrite(phoneNumber,0.3)
         pyautogui.typewrite(['enter'])
@@ -62,22 +68,22 @@ class Login():
         pyautogui.click(940, 845, 1)#点击登陆
         
         pyautogui.click(1250, 750, 1)#点击确认删除
+        sleep(5)
+        self.login_exit()
         
-    def exit(self):
-        sleep(4)
-        pyautogui.click( random_W(1785) , random_W(140) , 1)#点击退出
-        
-        sleep(2)
-        
-        pyautogui.click( random_W(115) , random_W(90) , 1)#点击设置
-        
+    def login_exit(self):
+        print('login_exit')
+        sleep(12)
+        pyautogui.click( random_W(1770) , random_W(115) , 1)#点击取消
+         
         sleep(1)
-        
-        pyautogui.click( random_W(900) , random_W(750) , 1)#点击退出账号
-        
+        pyautogui.click( random_W(118) , random_W(88) , 1)#点击设置
+         
         sleep(1)
-        
-        pyautogui.click( random_W(1220) , random_W(750) , 1)#点击确定
+        pyautogui.click( random_W(900) , random_W(755) , 1)#点击退出账号
+         
+        sleep(1)
+        pyautogui.click( random_W(1250) , random_W(750) , 1)#点击确认退出
         
     def test(self):
         printname = Generate()
@@ -86,5 +92,5 @@ class Login():
         pyautogui.hotkey('ctrl', 'v')#复制到剪切板
         
 # a = Login()
-# a.doGuest()
-#a.test()
+# a.login_exists()
+# a.login_exists()

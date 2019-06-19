@@ -32,13 +32,13 @@ class imageDif():
         loc = np.where(res >= threshold)
         
         ret = 0
-        print(loc)
+#         print(loc)
         if len(loc[0]):
             ret = 1
-        for pt in zip(*loc[::-1]):
-            cv2.rectangle(img_bgr,pt,(pt[0]+w,pt[1]+h),(0,255,255),2)
-        cv2.imshow('detected',img_bgr)
-        cv2.waitKey(0) 
+#         for pt in zip(*loc[::-1]):
+#             cv2.rectangle(img_bgr,pt,(pt[0]+w,pt[1]+h),(0,255,255),2)
+#         cv2.imshow('detected',img_bgr)
+#         cv2.waitKey(0) 
         return ret
         
     def doIt(self):

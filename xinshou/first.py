@@ -11,6 +11,7 @@ class First():
     def doit(self):
 #         pyautogui.click(640, 1060, 1)#切换到模拟器
         #sys.exit() 
+        sleep(10)
         pyautogui.click(random_W(1683), random_W(106), 1)#点击跳过    
         sleep(2)
         
