@@ -9,7 +9,7 @@ class Fifth():
         print(5)
         
     def doit(self):
-#         pyautogui.click(682, 1060, 1)#切换到模拟器
+#         pyautogui.click(640, 1060, 1)#切换到模拟器
         sleep(1.5)
         
         pyautogui.click( random_W(200) , random_W(300) , 2 ,1 )#点击2下屏幕

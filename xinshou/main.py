@@ -8,8 +8,10 @@ from xinshou.seventh import Seventh
 import sys
 from xinshou.imageDif import imageDif
 import pyautogui
+from xinshou.login import Login
 
-
+# login = Login()
+# login.doGuest()
 
 first = First()
 first.doit()

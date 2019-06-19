@@ -5,6 +5,10 @@ Created on 2019年6月14日
 '''
 import random
 import pyautogui
+import win32clipboard as w
+import win32con
+# import win32clipboard as w
+# import win32con
 
 #type = 1时为x,y轴坐标,2时为拖拽时常
 def random_W(W, rtype=1,v=[-2,2]):
@@ -28,3 +32,14 @@ def role_drap(xyArr):
             pyautogui.dragTo(random_W(xy[0]),random_W(xy[1]),random_W(xy[2],2),
                              button='left')
 
+def gettext():
+    w.OpenClipboard()
+    t = w.GetClipboardData(win32con.CF_UNICODETEXT)
+    w.CloseClipboard()
+    return t
+
+def settext(aString):
+    w.OpenClipboard()
+    w.EmptyClipboard()
+    w.SetClipboardData(win32con.CF_UNICODETEXT, aString)
+    w.CloseClipboard()

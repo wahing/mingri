@@ -7,7 +7,7 @@ class Sixth():
         print(6)
         
     def doit(self):
-#         pyautogui.click(682, 1060, 1)#切换到模拟器
+#         pyautogui.click(640, 1060, 1)#切换到模拟器
         sleep(3)
         
         pyautogui.click( random_W(700) , random_W(600) , 20 , 1.5 )#点击屏幕    
@@ -38,7 +38,7 @@ class Sixth():
         
         pyautogui.click( random_W(450) , random_W(905) , 10 , 1 )#跳过对话
         
-        role_drap([[1740,940,2,1] , [1247,396,3,2] , [1280,750,2,2]])#拖拽奶妈
+        role_drap([[1740,940,2,1] , [1247,396,4,2] , [1280,750,2,2]])#拖拽奶妈
         
         sleep(35)
         

@@ -7,7 +7,7 @@ class Second():
         print(2)
 
     def doit(self):
-#         pyautogui.click(682, 1060, 1)#切换到模拟器
+#         pyautogui.click(640, 1060, 1)#切换到模拟器
         sleep(2)
         
         pyautogui.click( random_W(250) , random_W(250) , 3 , 1.5 )#跳过对话

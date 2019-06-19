@@ -7,10 +7,12 @@ from time import sleep
 
 class imageDif():
     def __init__(self):
-        sleep(5)
+        sleep(3)
         print('image')
-#         pyautogui.click(666, 1060, 1)#切换到模拟器
-        
+#         pyautogui.click(640, 1060, 1)#切换到模拟器
+#         sleep(1)
+#         pyautogui.click(1500, 500, 1)#点干员按钮
+
     def dif(self,big,small):
         floder = 'images/'
         suffix = '.png'
@@ -40,6 +42,7 @@ class imageDif():
         return ret
         
     def doIt(self):
+        sleep(1)
         pos = (0,0,1920, 1080)
         cut_img = ImageGrab.grab(pos)
         floder = 'images/'
@@ -47,7 +50,7 @@ class imageDif():
         big = 'screen'
         cut_img.save(floder + big + suffix) #保存截图到文件夹中
         print("screenshots sucess")
-        character = ['ajln','sl','tjzw','yh','yy']
+        character = ['ajln','sl','tjzw','yh','yy','xx']
 #         character = ['moyao']
         ret = 0
         for small in character:

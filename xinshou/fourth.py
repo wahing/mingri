@@ -7,8 +7,7 @@ class Fourth():
         print(4)
         
     def formation(self):
-#         pyautogui.click(682, 1060, 1)#切换到模拟器
-        sleep(2)
+#         pyautogui.click(640, 1060, 1)#切换到模拟器
         pyautogui.click( random_W(100) , random_W(100) , 6 , 2 )#点击屏幕
         sleep(2)
         pyautogui.click( random_W(840) , random_W(365) , 1 )#选中加号

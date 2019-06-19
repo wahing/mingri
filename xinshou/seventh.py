@@ -7,7 +7,7 @@ class Seventh():
         print(7)
         
     def doit(self):
-#         pyautogui.click(682, 1060, 1)#切换到模拟器
+#         pyautogui.click(640, 1060, 1)#切换到模拟器
         sleep(2)
         
         pyautogui.click( random_W(162) , random_W(86) , 2 , 1 )#点击返回
@@ -44,7 +44,7 @@ class Seventh():
         pyautogui.click( random_W(1640) , random_W(960) , 1 )#点击合成玉
         sleep(4)
         
-        pyautogui.click( random_W(900) , random_W(500) , 1 )#点击屏幕一下
+        pyautogui.click( random_W(1680) , random_W(760) , 1 )#点击屏幕一下
         sleep(4)
         
         pyautogui.click( random_W(1680) , random_W(760) , 1 )#点击干员寻访
