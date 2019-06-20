@@ -15,19 +15,19 @@ def mingri():
     login = Login()
     login.login_exists()
     login.doGuest()
-     
+       
     first = First()
     first.doit()
-       
+         
     second = Second()
     second.doit()
-     
+      
     third = Third()
     third.doIt()
-         
+          
     fourth = Fourth()
     fourth.formation()
-     
+      
     fifth = Fifth()
     fifth.doit()
       

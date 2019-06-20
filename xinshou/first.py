@@ -2,7 +2,6 @@ from common.functions import random_W, role_drap
 import pyautogui
 from time import sleep
 from multiprocessing import sys
-from test.sortperf import doit
 
 class First():
     def __init__(self):

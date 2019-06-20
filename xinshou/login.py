@@ -2,7 +2,6 @@ from common.functions import *
 import pyautogui
 from time import sleep
 from multiprocessing import sys
-from test.sortperf import doit
 import win32clipboard as w
 # import win32con
 from common.name import *
@@ -73,13 +72,13 @@ class Login():
         
     def login_exit(self):
         print('login_exit')
-        sleep(12)
+        sleep(15)
         pyautogui.click( random_W(1770) , random_W(115) , 1)#点击取消
          
         sleep(1)
         pyautogui.click( random_W(118) , random_W(88) , 1)#点击设置
          
-        sleep(1)
+        sleep(2)
         pyautogui.click( random_W(900) , random_W(755) , 1)#点击退出账号
          
         sleep(1)

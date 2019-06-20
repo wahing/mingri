@@ -13,6 +13,10 @@ class Seventh():
          
         sleep(3)
         pyautogui.click( random_W(1780) , random_W(120) , 2 , 1 )#点击取消
+        
+        sleep(10)
+        pyautogui.click( random_W(1780) , random_W(120) , 2 , 1 )#点击取消
+        
          
         sleep(3)
         pyautogui.click( random_W(200) , random_W(110) , 1 )#点击屏幕

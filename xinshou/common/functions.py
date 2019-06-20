@@ -16,7 +16,7 @@ def random_W(W, rtype=1,v=[-2,2]):
         W = W + random.randint(v[0],v[1])
     else:
         if not v:
-            v = [-0.2,0.2]
+            v = [-0.1,0.1]
         W = W + round(random.uniform(v[0],v[1]),2)
     return W
     
