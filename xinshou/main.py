@@ -19,8 +19,11 @@ def mingri():
     second.doit()
        
     third = Third()
-    third.doIt()
-           
+    ret = third.doIt()
+    #如果有六星返程成功
+    if ret:
+        return True
+    
     fourth = Fourth()
     fourth.formation()
        
@@ -31,19 +34,13 @@ def mingri():
     sixth.doit()
     
     seventh = Seventh()
-    seventh.doit()
-    
-    #最后看是否抽到
-    pyautogui.click(1500, 500, 1)#点干员按钮
-    imagedif = imageDif()
-    six_nums = imagedif.doIt()
-    if six_nums > 1:
-        print('second successd')
+    ret = seventh.doit()
+    #如果有六星返程成功
+    if ret:
         return True
-    else:
-        print('second failed')
-    pyautogui.click( random_W(162) , random_W(86) , 2 , 1 )#点击返回
     
+    login = Login()
+    login.login_exit()
     return False #返回false为重复循环，True为终止循环刷
 
     
@@ -63,7 +60,6 @@ def Go():
     while flag == False:
         if count > 0:
             login.login_exists()
-    #         login.login_exit()
             login.doGuest(True)
         else:
             login.doGuest()

@@ -5,12 +5,12 @@ from multiprocessing import sys
 import win32clipboard as w
 # import win32con
 from common.name import *
+from xinshou.common.buttons import settings
 
 class Login():
     def __init__(self):
         print('login')
 #         pyautogui.click(640, 1060, 1)#切换到模拟器
-        sleep(2)
 
     #全新的游戏没有账户管理
     #flag为flase时为新客户端，不点击账户管理
@@ -79,8 +79,8 @@ class Login():
         pyautogui.click( random_W(1736) , random_W(121) , 4 ,2)#点击取消，签到取消
 #         pyautogui.click( random_W(1770) , random_W(115) , 4 ,2)#点击取消，签到取消
         
-        sleep(1)
-        pyautogui.click( random_W(118) , random_W(88) , 1)#点击设置
+        sleep(2)
+        settings()
          
         sleep(2)
         pyautogui.click( random_W(900) , random_W(755) , 1)#点击退出账号

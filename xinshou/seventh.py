@@ -3,6 +3,7 @@ import pyautogui
 from time import sleep
 from xinshou.imageDif import imageDif
 from tkinter import messagebox
+from xinshou.common.buttons import *
 
 
 class Seventh():
@@ -85,9 +86,23 @@ class Seventh():
         sleep(2)
         pyautogui.click( random_W(1750) , random_W(95) , 1 )#点击skip
         
-        sleep(2)
-        pyautogui.click( random_W(60) , random_W(50) , 3 , 1 )#结束
+        sleep(5)
+        blank(3)
         
-        pyautogui.click( random_W(162) , random_W(86) , 1 , 1 )#点击返回
+        sleep(5)
+        back()
+        
+        #最后看是否抽到
+        sleep(1)
+        pyautogui.click(1500, 500, 1)#点干员按钮
+        imagedif = imageDif()
+        six_nums = imagedif.doIt()
+        if six_nums > 1:
+            print('second successd')
+            return True
+        else:
+            print('second failed')
+        sleep(3)
+        back()  #点击返回
 #     doit(1)  
         
