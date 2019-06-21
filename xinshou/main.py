@@ -12,40 +12,23 @@ from common.functions import random_W, role_drap
 from time import sleep
 
 def mingri():
-    login = Login()
-    login.login_exists()
-    login.doGuest()
-       
     first = First()
     first.doit()
-         
+          
     second = Second()
     second.doit()
-      
+       
     third = Third()
     third.doIt()
-          
+           
     fourth = Fourth()
     fourth.formation()
-      
+       
     fifth = Fifth()
     fifth.doit()
-      
+       
     sixth = Sixth()
     sixth.doit()
-    
-    ####第一次抽卡不好匹配，先点到干员，再判断,重新验证
-    sleep(2)
-    pyautogui.click( random_W(162) , random_W(86) , 2 , 1 )#点击返回
-    pyautogui.click(1500, 500, 1)#点干员按钮
-    imagedif = imageDif()
-    six_nums = imagedif.doIt()
-    if six_nums > 0:
-        print('first successd')
-        return True
-    else:
-        print('first failed')
-    pyautogui.click( random_W(162) , random_W(86) , 2 , 1 )#点击返回
     
     seventh = Seventh()
     seventh.doit()
@@ -61,17 +44,41 @@ def mingri():
         print('second failed')
     pyautogui.click( random_W(162) , random_W(86) , 2 , 1 )#点击返回
     
-    return False #返回flase为重复循环，True为终止循环刷
+    return False #返回false为重复循环，True为终止循环刷
 
-flag = False
-count = 0
-pyautogui.click(640, 1060, 1)#切换到模拟器
-while flag == False:
-    if count > 0:
-        login = Login()
-        login.login_exit()
-        
-    count += 1
-    flag = mingri()
-    print('---执行第'+ count +'次----')
     
+currentExec = 1  #当前执行窗口数量
+maxExec = 6   #最大执行窗口数
+def Go():
+    pyautogui.click(640, 1060, 1)#切换到模拟器
+    pyautogui.click(587, 983, 1)#切换到第一个窗口
+    
+    global currentExec,maxExec
+    flag = False
+    login = Login()
+    if currentExec== 1:
+        count = 1
+    else:
+        count = 0
+    while flag == False:
+        if count > 0:
+            login.login_exists()
+    #         login.login_exit()
+            login.doGuest(True)
+        else:
+            login.doGuest()
+        
+        flag = mingri()
+        count += 1
+        print('---执行第'+str(currentExec)+'个窗口'+'第'+ str(count) +'次执行----')
+    
+    currentExec += 1
+    pyautogui.click(1860, 15, 1)#关闭模拟器
+    sleep(1)
+    pyautogui.click(1104, 596, 1)#点击退出按钮
+    if currentExec > maxExec: #当完成最大数后退出程序
+        exit()
+    else:
+        Go()
+        
+Go()
