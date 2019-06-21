@@ -12,10 +12,13 @@ class Login():
 #         pyautogui.click(640, 1060, 1)#切换到模拟器
         sleep(2)
 
-    def doGuest(self):
-        sleep(10)
+    #全新的游戏没有账户管理
+    #flag为flase时为新客户端，不点击账户管理
+    def doGuest(self,flag=False):
+        sleep(8)
         print('doGuest')
-        pyautogui.click(1350, 980, 1)#点击账号管理
+        if flag:
+            pyautogui.click(1350, 980, 1)#点击账号管理
         
         sleep(2)
         pyautogui.click(1260, 750, 1)#点击游客登陆
@@ -73,8 +76,9 @@ class Login():
     def login_exit(self):
         print('login_exit')
         sleep(15)
-        pyautogui.click( random_W(1770) , random_W(115) , 1)#点击取消
-         
+        pyautogui.click( random_W(1736) , random_W(121) , 4 ,2)#点击取消，签到取消
+#         pyautogui.click( random_W(1770) , random_W(115) , 4 ,2)#点击取消，签到取消
+        
         sleep(1)
         pyautogui.click( random_W(118) , random_W(88) , 1)#点击设置
          

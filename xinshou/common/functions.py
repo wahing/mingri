@@ -11,7 +11,7 @@ import win32con
 # import win32con
 
 #type = 1时为x,y轴坐标,2时为拖拽时常
-def random_W(W, rtype=1,v=[-2,2]):
+def random_W(W, rtype=1,v=[-1,1]):
     if rtype == 1:
         W = W + random.randint(v[0],v[1])
     else:

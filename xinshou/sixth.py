@@ -25,8 +25,8 @@ class Sixth():
         
         pyautogui.click(random_W(1683), random_W(106), 1)#点击跳过    
         sleep(2)
-    
-        pyautogui.click( random_W(1298) , random_W(736) , 1 )#点击确定
+
+        pyautogui.click( random_W(1300) , random_W(750) , 1 )#点击确定
         
         sleep(3)
         
@@ -38,9 +38,8 @@ class Sixth():
         
         pyautogui.click( random_W(450) , random_W(905) , 10 , 1 )#跳过对话
         
-        role_drap([[1740,940,2,1] , [1247,396,4.5,2] , [1280,750,2,2]])#拖拽奶妈
+        role_drap([[1740,940,2,1] , [1280,396,4.5,2] , [1280,760,3,2]])#拖拽奶妈
         
         sleep(35)
-        
         pyautogui.click( random_W(450) , random_W(905) , 5 , 3 )#跳过对话
 #     doit(1)   
