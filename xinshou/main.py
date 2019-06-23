@@ -46,11 +46,16 @@ def mingri():
     
 currentExec = 1  #当前执行窗口数量
 maxExec = 6   #最大执行窗口数
+window_x = 1060 #windows窗口x轴
+window_y = 1050 #windows窗口y轴
+x_add = 160
 def Go():
-    pyautogui.click(640, 1060, 1)#切换到模拟器
-    pyautogui.click(587, 983, 1)#切换到第一个窗口
+#     pyautogui.click(640, 1060, 1)#切换到模拟器
+#     pyautogui.click(587, 983, 1)#切换到第一个窗口
     
-    global currentExec,maxExec
+    global currentExec,maxExec,window_x,window_y,x_add
+    
+    pyautogui.click((window_x + (1-currentExec)*x_add), window_y, 1)#切换到第一个窗口
     flag = False
     login = Login()
     if currentExec== 1:

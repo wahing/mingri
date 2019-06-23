@@ -5,7 +5,7 @@ from multiprocessing import sys
 import win32clipboard as w
 # import win32con
 from common.name import *
-from xinshou.common.buttons import settings
+from xinshou.common.buttons import settings, cannel
 
 class Login():
     def __init__(self):
@@ -49,6 +49,7 @@ class Login():
         phoneNumber = '18866478814'
         psw = '12345678a'
         
+        sleep(1)
         pyautogui.click(1350, 980, 1)#点击账号管理
         sleep(1)
         pyautogui.click(640, 740, 1)#账户登陆
@@ -76,7 +77,7 @@ class Login():
     def login_exit(self):
         print('login_exit')
         sleep(15)
-        pyautogui.click( random_W(1736) , random_W(121) , 4 ,2)#点击取消，签到取消
+        cannel(3)
 #         pyautogui.click( random_W(1770) , random_W(115) , 4 ,2)#点击取消，签到取消
         
         sleep(2)

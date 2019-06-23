@@ -20,3 +20,7 @@ def blank(counts=1,times=1):
 #点击设置
 def settings(counts=1,times=1):
     pyautogui.click( random_W(118) , random_W(88) , counts , times )
+    
+#关闭签到和公告
+def cannel(counts=1,times=1):
+    pyautogui.click( random_W(1750) , random_W(130) , counts , times )
