@@ -46,7 +46,7 @@ def mingri():
     
 currentExec = 1  #当前执行窗口数量
 maxExec = 6   #最大执行窗口数
-window_x = 1060 #windows窗口x轴
+window_x = 680 #windows窗口x轴
 window_y = 1050 #windows窗口y轴
 x_add = 160
 def Go():

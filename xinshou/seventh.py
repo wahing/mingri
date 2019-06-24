@@ -83,14 +83,22 @@ class Seventh():
         sleep(2)
         pyautogui.click( random_W(1320) , random_W(730) , 1 )#点击确定
         
-        sleep(2)
+        sleep(20)
         pyautogui.click( random_W(1750) , random_W(95) , 1 )#点击skip
-        
-        sleep(5)
         blank(3)
         
-        sleep(5)
         back()
+        sleep(2)
+        messagebox.showinfo('1')
+        pyautogui.click( random_W(1156) , random_W(535) , 1 )#点击编队
+        blank(3)
+        pyautogui.click( random_W(1464) , random_W(93) , 1 )#点击快捷编队
+        sleep(3)
+        pyautogui.click( random_W(1700) , random_W(970) , 1 )
+        sleep(1)
+        back()
+        
+        
         
         #最后看是否抽到
         sleep(1)
